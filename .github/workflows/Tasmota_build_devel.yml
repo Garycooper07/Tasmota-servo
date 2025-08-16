@@ -17,7 +17,7 @@ concurrency:
 jobs:
   be_solidify:
     runs-on: ubuntu-latest
-    if: github.repository == 'arendst/Tasmota' && github.ref_name == 'development'
+    if: github.ref_name == 'development'
     continue-on-error: true
     steps:
       - uses: actions/checkout@v4
@@ -54,7 +54,7 @@ jobs:
   push_solidified:
     needs: be_solidify
     runs-on: ubuntu-latest
-    if: github.repository == 'arendst/Tasmota' && github.ref_name == 'development'
+    if: github.ref_name == 'development'
     continue-on-error: true
     steps:
       - uses: actions/checkout@v4
@@ -82,7 +82,7 @@ jobs:
   safeboot-images:
     needs: push_solidified
     runs-on: ubuntu-latest
-    if: github.repository == 'arendst/Tasmota'
+    if: github.ref_name == 'development'
     continue-on-error: true
     strategy:
       matrix:
@@ -139,7 +139,7 @@ jobs:
   base-images:
     needs: push_solidified
     runs-on: ubuntu-latest
-    if: github.repository == 'arendst/Tasmota'
+    if: github.ref_name == 'development'
     continue-on-error: true
     strategy:
       matrix:
