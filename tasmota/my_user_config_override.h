@@ -87,8 +87,11 @@ Examples :
 // !!! Remember that your changes GOES AT THE BOTTOM OF THIS FILE right before the last #endif !!!
 */
 
+// Active le support Servo
+#define USE_SERVO
 
-
+// Active Rules (pour automatiser les mouvements)
+#define USE_RULES
 
 
 #endif  // _USER_CONFIG_OVERRIDE_H_
