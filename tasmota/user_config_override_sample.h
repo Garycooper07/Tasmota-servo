@@ -88,7 +88,13 @@ Examples :
 */
 
 
+// Active le support Servo
+#define USE_SERVO
 
+// Active Rules (pour automatiser les mouvements)
+#define USE_RULES
+
+#endif  // _MY_USER_CONFIG_OVERRIDE_H_
 
 
 #endif  // _USER_CONFIG_OVERRIDE_H_
